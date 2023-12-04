@@ -1,0 +1,46 @@
+{
+    "name": "cmf/upload",
+    "description": "文件上传扩展",
+    "keywords": [
+        "upload",
+        "file",
+        "image",
+        "video",
+        "document"
+    ],
+    "type": "cmf-extension",
+    "license": "MIT",
+    "homepage": "https://phpcmf.cn",
+
+    "require": {
+        "php": ">=8.0",
+        "ext-json": "*",
+        "enshrined/svg-sanitize": "^0.15.4",
+        "cmf/core": "^1.0",
+        "guzzlehttp/guzzle": "^6.0 || ^7.0",
+        "ramsey/uuid": "^3.5.2 || ^4",
+        "softcreatr/php-mime-detector": "^3.0"
+    },
+
+    "suggest": {
+        "league/flysystem-aws-s3-v3": "使用 API 版本 3 上传到 AWS S3。",
+        "overtrue/flysystem-qiniu": "使用 API 上传到七牛."
+    },
+
+    "extra": {
+        "cmf-extension": {
+            "title": "上传",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-file-upload",
+                "backgroundColor": "#e74c3c",
+                "color": "#fff"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Cmf\\Upload\\": "src/"
+        }
+    }
+}
